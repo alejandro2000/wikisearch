@@ -19,8 +19,7 @@ public class AppTest
         // Optional. If not specified, WebDriver searches the PATH for chromedriver.
         //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ File.separator+"chromedriver");
 
-        DesiredCapabilities capability = DesiredCapabilities.chrome();
-        WebDriver driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"),capability);
+        WebDriver driver = new ChromeDriver();
         driver.get("http://www.google.com/");
         Thread.sleep(5000);  // Let the user actually see something!
         WebElement searchBox = driver.findElement(By.name("q"));
