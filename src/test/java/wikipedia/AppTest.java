@@ -6,13 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+
 public class AppTest 
 {
     @Test
     public void shouldAnswerWithTrue() throws InterruptedException {
         // Optional. If not specified, WebDriver searches the PATH for chromedriver.
-        System.setProperty("webdriver.chrome.driver", "chromedriver");
-
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ File.separator+"chromedriver");
 
         WebDriver driver = new ChromeDriver();
         driver.get("http://www.google.com/");
